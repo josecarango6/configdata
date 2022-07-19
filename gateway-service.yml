@@ -23,3 +23,19 @@ spring:
           uri: lb://shopping-service
           predicates:
             - Path=/store/api/v1/shoppings/**
+        - id: user-service
+          uri: lb://user-service
+          predicates:
+            - Path=/movie/api/v1/users/**
+        - id: movie-service
+          uri: lb://movie-service
+          predicates:
+            - Path=/movie/api/v1/movies/**
+        - id: showtime-service
+          uri: lb://showtime-service
+          predicates:
+            - Path=/movie/api/v1/showtimes/**
+        - id: booking-service
+          uri: lb://booking-service
+          predicates:
+            - Path=/movie/api/v1/bookings/**
